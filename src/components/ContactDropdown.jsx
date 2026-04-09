@@ -29,7 +29,7 @@ const ContactDropdown = ({ label, className, position = 'top' }) => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: position === 'top' ? -10 : 10 }}
               transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-              className={`absolute z-[70] min-w-[220px] rounded-2xl bg-gray-800/95 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden ${
+              className={`absolute z-[70] min-w-[220px] max-w-[90vw] rounded-2xl bg-gray-800/95 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden ${
                 position === 'top' ? 'bottom-full mb-4 left-1/2 -translate-x-1/2' : 'top-full mt-4 right-0'
               }`}
             >

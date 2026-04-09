@@ -21,14 +21,15 @@ function App() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-900 text-primary">
+      <div className="flex items-center justify-center min-h-[100dvh] bg-gray-900 text-primary">
         <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-primary"></div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gray-900 min-h-screen text-gray-100 font-sans selection:bg-primary selection:text-white">
+    <div className="bg-gray-900 min-h-[100dvh] text-gray-100 font-sans selection:bg-primary selection:text-white pb-[env(safe-area-inset-bottom)]">
+
       <CustomCursor />
       <Navbar />
       <main>

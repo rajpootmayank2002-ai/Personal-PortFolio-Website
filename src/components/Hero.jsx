@@ -85,7 +85,8 @@ const Hero = () => {
   }), []);
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-20 px-4">
+
       {init && (
         <div className="absolute inset-0 z-0">
           <Particles id="tsparticles" options={particlesConfig} />
