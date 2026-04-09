@@ -29,9 +29,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        scrolled ? 'bg-gray-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-gray-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
+        }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <motion.div
@@ -40,7 +39,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <a href="#home" className="text-2xl font-bold tracking-tighter">
-            <span className="text-primary">Mayank</span>.dev
+            <span className="text-primary">Mayank</span>.PortFolio
           </a>
         </motion.div>
 
@@ -58,7 +57,7 @@ const Navbar = () => {
               {link.name}
             </motion.a>
           ))}
-          <ContactDropdown 
+          <ContactDropdown
             label="Hire Me"
             position="bottom"
             className="px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-sm font-medium cursor-pointer"
@@ -94,7 +93,7 @@ const Navbar = () => {
               <X size={32} />
             </button>
 
-            <motion.nav 
+            <motion.nav
               className="flex flex-col items-center gap-8"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -120,7 +119,7 @@ const Navbar = () => {
                 transition={{ delay: 0.1 + navLinks.length * 0.1 }}
                 className="pt-8"
               >
-                <ContactDropdown 
+                <ContactDropdown
                   label="Hire Me"
                   position="bottom"
                   className="px-10 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-xl font-bold cursor-pointer"
