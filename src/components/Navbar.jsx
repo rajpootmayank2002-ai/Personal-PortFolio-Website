@@ -81,35 +81,55 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full bg-gray-900 border-b border-gray-800 shadow-xl md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 h-screen w-screen bg-gray-900/95 backdrop-blur-xl z-50 md:hidden flex flex-col items-center justify-center transition-all"
           >
-            <div className="flex flex-col items-center py-6 gap-6">
-              {navLinks.map((link) => (
-                <a
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-6 right-6 text-gray-300 hover:text-white"
+            >
+              <X size={32} />
+            </button>
+
+            <motion.nav 
+              className="flex flex-col items-center gap-8"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {navLinks.map((link, index) => (
+                <motion.a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-gray-300 hover:text-primary transition-colors"
+                  className="text-3xl font-bold text-gray-300 hover:text-primary transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + index * 0.1 }}
                 >
+                  <span className="text-primary/50 text-xl mr-4">0{index + 1}.</span>
                   {link.name}
-                </a>
+                </motion.a>
               ))}
-              <div className="pt-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + navLinks.length * 0.1 }}
+                className="pt-8"
+              >
                 <ContactDropdown 
                   label="Hire Me"
                   position="bottom"
-                  className="px-8 py-3 border border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-lg font-medium cursor-pointer"
+                  className="px-10 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-xl font-bold cursor-pointer"
                 />
-              </div>
-            </div>
-
+              </motion.div>
+            </motion.nav>
           </motion.div>
         )}
       </AnimatePresence>
+
     </header>
   );
 };

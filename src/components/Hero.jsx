@@ -103,7 +103,7 @@ const Hero = () => {
         </motion.p>
         
         <motion.h1
-          className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -114,6 +114,7 @@ const Hero = () => {
             I build things for the web.
           </span>
         </motion.h1>
+
         
         <motion.p
           className="text-gray-400 max-w-2xl mx-auto text-lg mb-10"
