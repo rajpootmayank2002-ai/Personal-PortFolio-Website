@@ -13,18 +13,41 @@ const HireMeModal = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    
-    // Simulate API call - In a real app, you'd use Formspree, EmailJS, or your own backend
-    // Example: fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: JSON.stringify(formData) })
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => {
+
+    const form = new FormData();
+    // STEP 1: Get your free Access Key from https://web3forms.com/
+    // STEP 2: Replace "YOUR_ACCESS_KEY_HERE" with your actual key below
+    form.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
+    form.append("subject", `New Inquiry from ${formData.name}`);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setStatus('idle');
+          onClose();
+        }, 2500);
+      } else {
+        alert("Something went wrong. Please try again or contact me directly via email.");
         setStatus('idle');
-        onClose();
-      }, 2000);
-    }, 1500);
+      }
+    } catch (error) {
+      alert("Error sending message. Please check your connection.");
+      setStatus('idle');
+    }
   };
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
