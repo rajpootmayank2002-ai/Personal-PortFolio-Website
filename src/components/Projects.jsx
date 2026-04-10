@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { ExternalLink } from 'lucide-react';
+import portfolioImg from '../assets/portfolio-screenshot.png';
 
 const projects = [
   {
@@ -12,6 +13,15 @@ const projects = [
     github: 'https://github.com/rajpootmayank2002-ai/AI-Powered-ResumeBuilder',
     live: 'https://ai-resumebuilder-mayank.vercel.app',
   },
+  {
+    title: 'Personal PortFolio website',
+    description: 'A modern and responsive personal portfolio website developed to present my projects, technical skills, and achievements. The website includes sections for projects, certificates, and a downloadable resume so that recruiters and visitors can easily explore my work and learn more about my development experience.',
+    image: portfolioImg,
+    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Framer Motion', 'web3forms', 'Lucide React & React Icons'],
+    github: 'https://github.com/rajpootmayank2002-ai/Personal-PortFolio-Website',
+    live: 'https://maynkk-port-folio-website.vercel.app/',
+  },
+
   {
     title: 'Heart-Disease-prediction-Model',
     description: 'A machine learning model developed using Python and data science libraries to predict the likelihood of heart disease based on medical attributes. This project involved extensive data analysis, feature engineering, and model training.',
