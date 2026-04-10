@@ -9,7 +9,7 @@ const projects = [
     title: 'AI-Powered-ResumeBuilder',
     description: 'A user-friendly platform that allows users to create professional resumes by filling out a structured form. It features instant PDF generation, allowing users to download their resumes in seconds. Built with a focus on simplicity and efficiency.',
     image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000&auto=format&fit=crop',
-    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Framer Motion', 'web3forms'],
+    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Framer Motion','FireBase'],
     github: 'https://github.com/rajpootmayank2002-ai/AI-Powered-ResumeBuilder',
     live: 'https://ai-resumebuilder-mayank.vercel.app',
   },
