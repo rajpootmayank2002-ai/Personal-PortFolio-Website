@@ -8,9 +8,11 @@ import Certificates from './components/Certificates';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
+import HireMeModal from './components/HireMeModal';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isHireMeModalOpen, setIsHireMeModalOpen] = useState(false);
 
   useEffect(() => {
     // Simulate loading time
@@ -18,6 +20,9 @@ function App() {
       setLoading(false);
     }, 2000);
   }, []);
+
+  const openHireMeModal = () => setIsHireMeModalOpen(true);
+  const closeHireMeModal = () => setIsHireMeModalOpen(false);
 
   if (loading) {
     return (
@@ -29,9 +34,8 @@ function App() {
 
   return (
     <div className="bg-gray-900 min-h-[100dvh] text-gray-100 font-sans selection:bg-primary selection:text-white pb-[env(safe-area-inset-bottom)]">
-
       <CustomCursor />
-      <Navbar />
+      <Navbar onHireMeClick={openHireMeModal} />
       <main>
         <Hero />
         <About />
@@ -39,8 +43,9 @@ function App() {
         <Experience />
         <Projects />
         <Certificates />
-        <Contact />
+        <Contact onHireMeClick={openHireMeModal} />
       </main>
+      <HireMeModal isOpen={isHireMeModalOpen} onClose={closeHireMeModal} />
     </div>
   );
 }

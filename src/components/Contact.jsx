@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 import ContactDropdown from './ContactDropdown';
 
-const Contact = () => {
+const Contact = ({ onHireMeClick }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
@@ -25,12 +25,21 @@ const Contact = () => {
             Although I'm  currently looking for any new opportunities, my inbox is always open. and you can contact me on my email id and whatsapp number
           </p>
 
-          <ContactDropdown 
-            label="Say Hello"
-            position="top"
-            className="inline-block px-10 py-5 border border-primary text-primary hover:bg-primary/10 transition-all rounded-md font-medium font-mono text-sm tracking-wider cursor-pointer"
-          />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <ContactDropdown 
+              label="Say Hello"
+              position="top"
+              className="w-full sm:w-auto px-10 py-5 border border-primary text-primary hover:bg-primary/10 transition-all rounded-md font-medium font-mono text-sm tracking-wider cursor-pointer text-center"
+            />
+            <button 
+              onClick={onHireMeClick}
+              className="w-full sm:w-auto px-10 py-5 bg-primary text-white hover:bg-orange-600 transition-all rounded-md font-medium font-mono text-sm tracking-wider cursor-pointer text-center shadow-lg shadow-primary/30"
+            >
+              Hire Me
+            </button>
+          </div>
         </motion.div>
+
 
 
         <motion.div 

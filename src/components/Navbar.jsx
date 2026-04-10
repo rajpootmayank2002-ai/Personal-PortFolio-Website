@@ -15,7 +15,7 @@ const navLinks = [
 
 import ContactDropdown from './ContactDropdown';
 
-const Navbar = () => {
+const Navbar = ({ onHireMeClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -57,11 +57,12 @@ const Navbar = () => {
               {link.name}
             </motion.a>
           ))}
-          <ContactDropdown
-            label="Hire Me"
-            position="bottom"
+          <button
+            onClick={onHireMeClick}
             className="px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-sm font-medium cursor-pointer"
-          />
+          >
+            Hire Me
+          </button>
         </nav>
 
 
@@ -119,11 +120,15 @@ const Navbar = () => {
                 transition={{ delay: 0.1 + navLinks.length * 0.1 }}
                 className="pt-8"
               >
-                <ContactDropdown
-                  label="Hire Me"
-                  position="bottom"
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    onHireMeClick();
+                  }}
                   className="px-10 py-4 border-2 border-primary text-primary rounded-full hover:bg-primary/10 transition-all text-xl font-bold cursor-pointer"
-                />
+                >
+                  Hire Me
+                </button>
               </motion.div>
             </motion.nav>
           </motion.div>
