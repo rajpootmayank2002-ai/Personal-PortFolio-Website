@@ -17,7 +17,8 @@ const HireMeModal = ({ isOpen, onClose }) => {
     const form = new FormData();
     // STEP 1: Get your free Access Key from https://web3forms.com/
     // STEP 2: Replace "YOUR_ACCESS_KEY_HERE" with your actual key below
-    form.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    form.append("access_key", "8f845fb8-162b-413d-8ec6-9e1939168231");
+
     form.append("name", formData.name);
     form.append("email", formData.email);
     form.append("message", formData.message);
