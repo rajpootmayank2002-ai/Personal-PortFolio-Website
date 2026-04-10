@@ -8,7 +8,7 @@ const projects = [
     title: 'AI-Powered-ResumeBuilder',
     description: 'A user-friendly platform that allows users to create professional resumes by filling out a structured form. It features instant PDF generation, allowing users to download their resumes in seconds. Built with a focus on simplicity and efficiency.',
     image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000&auto=format&fit=crop',
-    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Framer Motion'],
+    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Framer Motion', 'web3forms'],
     github: 'https://github.com/rajpootmayank2002-ai/AI-Powered-ResumeBuilder',
     live: 'https://ai-resumebuilder-mayank.vercel.app',
   },
@@ -24,7 +24,7 @@ const projects = [
     title: 'To-Do App',
     description: 'To-Do App is a simple task management web application that helps users organize their daily tasks efficiently. Users can add, edit, delete, and mark tasks as completed. The application provides a clean and responsive interface, making it easy to manage tasks on both desktop and mobile devices.',
     image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1305&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    tech: ['React','TailwindCss','JavaScript'],
+    tech: ['React', 'TailwindCss', 'JavaScript'],
     github: 'https://github.com/rajpootmayank2002-ai/To-Do-app',
     live: 'https://to-do-app-ruddy-pi.vercel.app/',
   }
@@ -52,17 +52,16 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative grid md:grid-cols-12 items-center gap-8 ${
-                  index % 2 === 0 ? '' : 'md:text-right text-left'
-                }`}
+                className={`relative grid md:grid-cols-12 items-center gap-8 ${index % 2 === 0 ? '' : 'md:text-right text-left'
+                  }`}
               >
                 {/* Image */}
                 <div className={`md:col-span-7 relative group ${index % 2 === 0 ? 'md:order-1' : 'md:col-start-6 md:order-2'}`}>
                   <a href={project.github} className="relative block h-full w-full rounded-xl overflow-hidden cursor-pointer">
                     <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-all duration-300 z-10" />
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
+                    <img
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-auto md:h-[350px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
                     />
                   </a>
@@ -74,7 +73,7 @@ const Projects = () => {
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 hover:text-primary transition-colors">
                     <a href={project.github}>{project.title}</a>
                   </h3>
-                  
+
                   <div className={`bg-gray-800/90 backdrop-blur-md p-6 border border-gray-700 rounded-xl mb-6 shadow-2xl relative`}>
                     <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                       {project.description}
