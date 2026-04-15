@@ -70,11 +70,10 @@ const Projects = () => {
                 {/* Image */}
                 <div className={`md:col-span-7 relative group ${index % 2 === 0 ? 'md:order-1' : 'md:col-start-6 md:order-2'}`}>
                   <a href={project.github} className="relative block h-full w-full rounded-xl overflow-hidden cursor-pointer">
-                    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-all duration-300 z-10" />
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-auto md:h-[350px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+                      className="w-full h-auto md:h-[350px] object-cover transition-all duration-500"
                     />
                   </a>
                 </div>

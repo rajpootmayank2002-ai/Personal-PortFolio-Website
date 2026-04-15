@@ -38,11 +38,11 @@ const About = () => {
 
             <div className="md:col-span-2 relative group">
               <div className="absolute inset-0 border-2 border-primary rounded-lg translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 z-0"></div>
-              <div className="relative z-10 rounded-lg overflow-hidden bg-primary/20 backdrop-blur-sm aspect-square flex items-center justify-center">
+              <div className="relative z-10 rounded-lg overflow-hidden aspect-square flex items-center justify-center">
                 <img
                   src={profileImg}
                   alt="Mayank Rajput Profile"
-                  className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
               </div>
             </div>
