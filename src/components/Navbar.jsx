@@ -11,8 +11,6 @@ const navLinks = [
   { name: 'Certificates', href: '#certificates' },
   { name: 'Contact', href: '#contact' },
 ];
-
-
 import ContactDropdown from './ContactDropdown';
 
 const Navbar = ({ onHireMeClick }) => {
@@ -39,7 +37,7 @@ const Navbar = ({ onHireMeClick }) => {
           transition={{ duration: 0.5 }}
         >
           <a href="#home" className="text-2xl font-bold tracking-tighter">
-            <span className="text-primary">Mayank</span>.PortFolio
+            <span className="text-primary">Mayank</span>.Dev
           </a>
         </motion.div>
 
@@ -64,8 +62,6 @@ const Navbar = ({ onHireMeClick }) => {
             Hire Me
           </button>
         </nav>
-
-
         {/* Mobile Toggle */}
         <div className="md:hidden">
           <button
@@ -85,7 +81,6 @@ const Navbar = ({ onHireMeClick }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 h-[100dvh] w-full bg-gray-900/95 backdrop-blur-xl z-50 md:hidden flex flex-col items-center justify-center transition-all p-safe"
-
           >
             <button
               onClick={() => setIsOpen(false)}
