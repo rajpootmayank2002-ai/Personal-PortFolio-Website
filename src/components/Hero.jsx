@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { Mail, Download } from 'lucide-react';
 
 const Hero = () => {
@@ -154,6 +154,14 @@ const Hero = () => {
           >
             <FaTwitter size={24} />
           </a>
+          <a
+            href="https://www.instagram.com/__mynkk_6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-gray-800 rounded-full text-gray-300 hover:text-primary hover:bg-gray-700 transition-all"
+          >
+            <FaInstagram size={24} />
+          </a>
         </motion.div>
 
         <motion.div
@@ -197,5 +205,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;
