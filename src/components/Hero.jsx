@@ -92,7 +92,7 @@ const Hero = () => {
           <Particles id="tsparticles" options={particlesConfig} />
         </div>
       )}
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
         <motion.p
           className="text-primary font-medium tracking-wider mb-4 uppercase"
@@ -102,7 +102,7 @@ const Hero = () => {
         >
           Hi, my name is
         </motion.p>
-        
+
         <motion.h1
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]"
           initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ const Hero = () => {
           </span>
         </motion.h1>
 
-        
+
         <motion.p
           className="text-gray-400 max-w-2xl mx-auto text-lg mb-10"
           initial={{ opacity: 0, y: 20 }}
