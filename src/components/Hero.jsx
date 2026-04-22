@@ -2,7 +2,8 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import { Mail, Download } from 'lucide-react';
 
 const Hero = () => {
@@ -149,10 +150,12 @@ const Hero = () => {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="#"
+            href="https://leetcode.com/u/MayankRajput/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 bg-gray-800 rounded-full text-gray-300 hover:text-primary hover:bg-gray-700 transition-all"
           >
-            <FaTwitter size={24} />
+            <SiLeetcode size={24} />
           </a>
           <a
             href="https://www.instagram.com/__mynkk_6"
