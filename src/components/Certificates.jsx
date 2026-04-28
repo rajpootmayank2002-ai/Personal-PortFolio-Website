@@ -50,7 +50,7 @@ const Certificates = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white whitespace-nowrap">
-              <span className="text-primary text-2xl md:text-3xl mr-2">05.</span> Certificates
+              <span className="text-primary text-2xl md:text-3xl mr-2">06.</span> Certificates
             </h2>
             <div className="h-[1px] w-full bg-gray-700"></div>
           </div>

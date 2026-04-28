@@ -52,7 +52,7 @@ const Projects = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-white whitespace-nowrap">
-              <span className="text-primary text-2xl md:text-3xl mr-2">04.</span> My Work
+              <span className="text-primary text-2xl md:text-3xl mr-2">05.</span> My Work
             </h2>
             <div className="h-[1px] w-full bg-gray-700"></div>
           </div>
@@ -85,8 +85,8 @@ const Projects = () => {
                     <a href={project.github}>{project.title}</a>
                   </h3>
 
-                  <div className={`bg-gray-800/90 backdrop-blur-md p-6 border border-gray-700 rounded-xl mb-6 shadow-2xl relative`}>
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  <div className={`bg-gray-800/95 backdrop-blur-xl p-8 border border-gray-700/50 rounded-2xl mb-8 shadow-2xl relative hover:border-primary/30 transition-all duration-300 text-left`}>
+                    <p className="text-gray-300 text-sm md:text-base leading-relaxed tracking-wide">
                       {project.description}
                     </p>
                   </div>

@@ -17,7 +17,7 @@ const Contact = ({ onHireMeClick }) => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto"
         >
-          <p className="text-primary font-mono mb-4 text-sm md:text-base">06. What's Next?</p>
+          <p className="text-primary font-mono mb-4 text-sm md:text-base">07. What's Next?</p>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Get In Touch</h2>
 
           

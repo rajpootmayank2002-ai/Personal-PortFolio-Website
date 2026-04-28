@@ -6,7 +6,8 @@ const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Education', href: '#experience' },
+  { name: 'Education', href: '#education' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Certificates', href: '#certificates' },
   { name: 'Contact', href: '#contact' },
@@ -105,7 +106,9 @@ const Navbar = ({ onHireMeClick }) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + index * 0.1 }}
                 >
-                  <span className="text-primary/50 text-xl mr-4">0{index + 1}.</span>
+                  <span className="text-primary/50 text-xl mr-4">
+                    {index === 0 ? "" : `0${index}.`}
+                  </span>
                   {link.name}
                 </motion.a>
               ))}
